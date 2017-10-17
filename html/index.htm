@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PAGOD</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	<link type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap-timepicker.min.css" />
+    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-timepicker.min.js"></script>
+	<script src="../jquery.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"/>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+<body>
+	
+	<!--- NAVBAR -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+					<a href="#" class="navbar-brand">PAGOD</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home1.htm" data-toggle="tooltip" data-placement="bottom" title="Logout"><span class="glyphicon glyphicon-off"></span></a></li>				
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="index.htm" data-toggle="tooltip" data-placement="bottom" title="Home" ><span class="glyphicon glyphicon-home"></span></a></li>
+						<li><a href="profile.htm" data-toggle="tooltip" data-placement="bottom" title="Profile">Allyn Joy</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	<!-- END NAVBAR -->
+
+	<!-- MIDDLE CONTENT  -->
+	<div class="container index_container">
+		<!-- ROW -->
+		<div class="row">
+
+			<!-- Column md 4 -->
+			<div class="col-md-4 right_side">
+
+				<!-- STUDENT INFORMATION -->
+				<div class="panel panel-default panel-shadow panel-profile-index">
+					<div class="panel-body">
+						<img class="cover-img-index img-responsive" alt="cover" src="../images/upv.jpg" data-toggle="modal" data-target="#cover-img" />
+						<div class="img-dp-index">
+							<img class="profile-img-index img-thumbnail img-responsive" alt="profile" src="../images/profile.jpeg" data-toggle="modal" data-target="#profile-img"/>
+						</div>
+						<div class="text-name-index">
+							<h4><b> Allyn Joy Calcaben</b></h4>
+							<p> BS in Computer Science VI </p>
+						</div>
+						<div class="ge-counts col-md-12 text-center">
+							<div class="count1 col-md-3 text-center">
+								<p><b><a href="#electives" data-toggle="modal">Electives</a></b><br> 4 </p>
+							</div>
+							<div class="count1 col-md-3 text-center">
+								<p><b><a href="#ah" data-toggle="modal">AH</a></b><br> 5 </p>
+							</div>
+							<div class="count1 col-md-3 text-center">
+								<p><b><a href="#mst" data-toggle="modal">MST</a></b><br> 4 </p>
+							</div>
+							<div class="count1 col-md-3 text-center">
+								<p><b><a href="#ssp" data-toggle="modal">SSP</a></b><br> 5 </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END STUDENT INFORMATION -->
+
+				<!-- BUTTONS PANEL -->
+				<div class="panel panel-default panel-shadow">
+					<div class="panel-body">
+						<div class="btn-group">
+							<div class="btn-group-justified btn_logged">
+								<a class="btn btn-primary" href="wishlist.htm"> Edit Subject Wishlist </a>
+							</div>
+							<div class="btn-group-justified btn_logged">
+								<a class="btn btn-primary" href="study_plan.htm"> View Study Plan </a>
+							</div>
+							<div class="btn-group-justified btn_logged">
+								<a class="btn btn-primary" href="acad_progress.htm"> View Academic Progress </a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END BUTTONS PANEL -->
+
+			</div>
+			<!-- End Column md 4 -->
+
+			<!-- TIME TABLE PANEL -->
+			<div class="col-md-8">
+				<div class="panel panel-default panel-shadow">
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+    							<thead>
+      								<tr>
+        								<th>TIME</th>
+        								<th>MON</th>
+        								<th>TUE</th>
+        								<th>WED</th>
+        								<th>THU</th>
+        								<th>FRI</th>
+      								</tr>
+    							</thead>
+    							<tbody>
+      								<tr>
+								        <td>07:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>08:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>08:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>09:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>09:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>10:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>10:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>11:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>11:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>12:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>12:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>01:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>01:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>02:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>02:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>03:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>03:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>04:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>04:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>05:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>05:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>06:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>06:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+    							</tbody>
+  							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- END ROW -->
+
+	</div>
+	<!-- END MIDDLE CONTENT -->
+
+	<!-- MODAL: electives -->
+	<div id="electives" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-ge-count">
+	  		<div class="modal-heading">
+				<p class="title">Electives</p>
+			</div>
+		    <div class="modal-body confirm_panel">
+		       <div class="table-responsive">
+						<table class="table">
+							<thead>
+  								<tr>
+    								<th>COURSE</th>
+    								<th>TITLE</th>
+    								<th>UNIT</th>
+  								</tr>
+							</thead>
+							<tbody>
+  								<tr>
+							        <td>CMSC 151</td>
+							        <td>System Analysis and Design</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>CMSC 162</td>
+							        <td>3D Animation</td>
+							        <td>3.0</td>
+  								</tr>
+  							</tbody>
+  						</table>
+  					</div>
+  				</div>
+  				<div class="modal-footer">
+			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END MODAL: electives --> 
+
+	<!-- MODAL: AH -->
+	<div id="ah" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-ge-count">
+	  		<div class="modal-heading">
+				<p class="title">GE (AH)</p>
+			</div>
+		    <div class="modal-body confirm_panel">
+		       <div class="table-responsive">
+						<table class="table">
+							<thead>
+  								<tr>
+    								<th>COURSE</th>
+    								<th>TITLE</th>
+    								<th>UNIT</th>
+  								</tr>
+							</thead>
+							<tbody>
+  								<tr>
+							        <td>Eng 2</td>
+							        <td>Read Right, Write Right</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Comm 1</td>
+							        <td>Communication Skills</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Comm 2</td>
+							        <td>Communication Skills 2</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Hum 1</td>
+							        <td>Art, Society, and the Individual</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Lit 1</td>
+							        <td>Literatures of the Philippines</td>
+							        <td>3.0</td>
+  								</tr>
+  							</tbody>
+  						</table>
+  					</div>
+  				</div>
+  				<div class="modal-footer">
+			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END MODAL: AH --> 
+
+	<!-- MODAL: MST -->
+	<div id="mst" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-ge-count">
+	  		<div class="modal-heading">
+				<p class="title">GE (MST)</p>
+			</div>
+		    <div class="modal-body confirm_panel">
+		       <div class="table-responsive">
+						<table class="table">
+							<thead>
+  								<tr>
+    								<th>COURSE</th>
+    								<th>TITLE</th>
+    								<th>UNIT</th>
+  								</tr>
+							</thead>
+							<tbody>
+  								<tr>
+							        <td>Aqua Sci 1</td>
+							        <td>Fish Make Sense</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Aqua Sci 16</td>
+							        <td>Fish Beyond Capture</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Bio20</td>
+							        <td>Living with Microbes in Sickness and in Health</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Bio 1</td>
+							        <td>Understanding Life</td>
+							        <td>3.0</td>
+  								</tr>
+  							</tbody>
+  						</table>
+  					</div>
+  				</div>
+  				<div class="modal-footer">
+			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END MODAL: MST -->
+
+	<!-- MODAL: SSP -->
+	<div id="ssp" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-ge-count">
+	  		<div class="modal-heading">
+				<p class="title">GE (SSP)</p>
+			</div>
+		    <div class="modal-body confirm_panel">
+		       <div class="table-responsive">
+						<table class="table">
+							<thead>
+  								<tr>
+    								<th>COURSE</th>
+    								<th>TITLE</th>
+    								<th>UNIT</th>
+  								</tr>
+							</thead>
+							<tbody>
+  								<tr>
+							        <td>Philo 1</td>
+							        <td>Phylosophical Analysis</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Hist 1</td>
+							        <td>Philippine History</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Soc Sci 5</td>
+							        <td>Understanding Gender</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Soc Sci 2</td>
+							        <td>Social, Economic, and Political Thought</td>
+							        <td>3.0</td>
+  								</tr>
+  								<tr>
+							        <td>Soc Sci 26</td>
+							        <td>People, Places, and Spaces in a Changing World</td>
+							        <td>3.0</td>
+  								</tr>
+  							</tbody>
+  						</table>
+  					</div>
+  				</div>
+  				<div class="modal-footer">
+			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END MODAL: SSP --> 
+
+	<!-- FOOTER -->
+	
+	<!-- END FOOTER --> 
+	
+</body>
+</html>

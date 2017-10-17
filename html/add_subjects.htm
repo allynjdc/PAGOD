@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PAGOD</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	<link type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap-timepicker.min.css" />
+    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-timepicker.min.js"></script>
+	<script src="../jquery.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"/>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+</head>
+
+<body>
+	
+	<!-- -->
+	<div class="container">
+		
+		<!-- -->
+		<div class="row">
+			
+			<!-- LOG IN PANEL -->
+			<div class="col-md-3">
+
+				<!-- Logged In -->
+				<div class="panel panel-default panel-shadow">
+					<div class="panel-body">
+						<div class="img-dp">
+							<img class="profile-img img-thumbnail img-responsive" alt="profile" src="images/profile.jpg" data-toggle="modal" data-target="#profile-img"/>
+						</div>
+						<h3 class="text-center">Welcome, Allyn Joy!</h3>
+						<div class="btn-group">
+							<div class="btn-group-justified btn_logged">
+								<a class="btn btn-primary" href="#"> Change Account </a>
+							</div>
+							<div class="btn-group-justified btn_logged">
+								<a class="btn btn-primary" href="#"> View Study Plan </a>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+
+
+			<!-- TIME TABLE PANEL -->
+			<div class="col-md-6">
+				<div class="panel panel-default panel-shadow">
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+    							<thead>
+      								<tr>
+        								<th>TIME</th>
+        								<th>MON</th>
+        								<th>TUE</th>
+        								<th>WED</th>
+        								<th>THU</th>
+        								<th>FRI</th>
+      								</tr>
+    							</thead>
+    							<tbody>
+      								<tr>
+								        <td>07:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>08:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>08:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>09:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>09:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>10:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>10:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>11:00 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>11:30 AM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>12:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>12:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>01:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>01:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>02:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>02:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>03:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>03:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>04:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>04:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>05:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>05:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>06:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>06:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:00 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+      								<tr>
+								        <td>07:30 PM</td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+								        <td></td>
+      								</tr>
+    							</tbody>
+  							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- CONSTRAINTS PANEL -->
+			<div class="col-md-3">
+				<div class="panel panel-default panel-shadow">
+					<div class="panel-body">
+						<div class="btn-group">
+							<div class="btn-group-justified">
+								<a class="btn btn-primary" data-toggle="modal" href="#addconstraint"><span class="glyphicon glyphicon-plus"></span> Add CONSTRAINT</a>
+							</div>
+							
+							<!-- PRIORITIES -->
+							<div class="panel-group priorities" id="accordion">
+								<!-- High Priority -->
+  								<div class="panel panel-default">
+    								<div class="panel-heading">
+      									<h4 class="panel-title">
+        									<!-- <a data-toggle="collapse" data-parent="#accordion" href="#high">High Priority</a> -->
+        									<a data-toggle="collapse" href="#high">High Priority</a>
+     									</h4>
+    								</div>
+    								<div id="high" class="panel-collapse collapse">
+      									<div class="panel-body">
+      										<div class="priority_entry">
+		  										<p>
+		  											<b>Class Start:</b>&nbsp;9:00 AM TF
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+		  									<div class="priority_entry">
+		  										<p>
+		  											<b>Class End:</b>&nbsp;5:30 PM MTh
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+      									</div>
+    								</div>
+    							</div>
+
+								<!-- Medium Priority -->
+								<div class="panel panel-default">
+    								<div class="panel-heading">
+      									<h4 class="panel-title">
+        									<a data-toggle="collapse" href="#medium">Medium Priority</a>
+     									</h4>
+    								</div>
+    								<div id="medium" class="panel-collapse collapse">
+      									<div class="panel-body">
+      										<div class="priority_entry">
+		  										<p>
+		  											<b>Class Start:</b>&nbsp;1:00 PM W
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+		  									<div class="priority_entry">
+		  										<p>
+		  											<b>No</b>&nbsp;10 - 11:30 AM classes
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+      									</div>
+      								</div>
+								</div>
+
+								<!-- Low Priority -->
+								<div class="panel panel-default">
+    								<div class="panel-heading">
+      									<h4 class="panel-title">
+        									<a data-toggle="collapse" href="#low">Low Priority</a>
+     									</h4>
+    								</div>
+    								<div id="low" class="panel-collapse collapse">
+      									<div class="panel-body">
+      										<div class="priority_entry">
+		  										<p>
+		  											<b>No</b>&nbsp;Lit classes
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+		  									<div class="priority_entry">
+		  										<p>
+		  											<b>No</b>&nbsp;TF classes
+		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
+		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  										</p>
+		  									</div>
+      									</div>
+    								</div>
+								</div>
+							</div>
+  							<div class="btn-group-justified">
+								<a class="btn btn-primary" href="#"> GENERATE </a>
+							</div>
+  						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- -->
+		<div class="row">
+			<div class="">
+				
+			</div>
+		</div>
+
+	</div>
+
+	<!--- MODAL ADD CONSTRAINTS -->
+	<div id="addconstraint" class="modal fade" role="dialog" >
+		<div class="modal-dialog">
+		  	<div class="modal-content ">
+			    <div class="modal-body ">
+			    	<a href="#" class="pull-right" data-dismiss="modal">&times;</a>
+			        <div>
+			        	<p> 
+			        		Priority: 
+			        		<label class="radio-inline"><input type="radio" name="priority">High</label>
+							<label class="radio-inline"><input type="radio" name="priority">Medium</label>
+							<label class="radio-inline"><input type="radio" name="priority">Low</label>
+						</p>
+			    	</div>
+			    	<form action="" method="POST">
+			    		<ul class="nav nav-tabs">
+  							<li class="active"><a data-toggle="tab" href="#courserestriction">Course Restriction</a></li>
+  							<li><a data-toggle="tab" href="#meetingtime">Meeting Time</a></li>
+						</ul>
+
+						<div class="tab-content">
+  							<div id="courserestriction" class="tab-pane fade in active">
+    							<h3>SOME CONTENT</h3>
+    							<p>Some content. Some content.</p>
+  							</div>
+  							<div id="meetingtime" class="tab-pane fade">
+    							
+					            <!-- <div class="form-group">
+					                <div class="input-group date" id="datetimepicker3">
+					                    <input type="text" class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-time"></span>
+					                    </span>
+					                </div>
+					            </div> -->
+
+					            <!-- <div class="input-group bootstrap-timepicker timepicker">
+						            <input id="timepicker1" type="text" class="form-control input-small">
+						            <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+						        </div>
+						        <script type="text/javascript">
+						            $('#timepicker1').timepicker();
+						        </script> -->
+
+					            <!-- <div class="bfh-timepicker" data-mode="12h">
+								</div> -->
+
+								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<span class="input-group-addon">Start Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+						        </div>
+
+						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<span class="input-group-addon">End Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+						        </div>
+						 
+						        <script type="text/javascript">
+						            $('#timepicker3').timepicker({
+						                minuteStep: 5,
+						                showInputs: false,
+						                disableFocus: true
+						            });
+						        </script>
+
+
+    							<p><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</p>
+
+    							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
+
+  							</div>
+						</div>
+			    	</form>
+			    	<button type="button" class="btn btn-primary btn_logged" data-dismiss="modal">Add</button>
+			    	<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+
+	<!--- MODAL REMOVE CONSTRAINTS -->
+	<div id="remove" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+		  	<div class="modal-content ">
+			    <div class="modal-body confirm_panel">
+			       <h4> Are you sure you want to remove this? </h4>
+			    	<button type="button" class="btn btn-danger" data-dismiss="modal">Remove</button>
+			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+
+</body>
+</html>
