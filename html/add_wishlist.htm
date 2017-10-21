@@ -17,7 +17,12 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 		    $('[data-toggle="tooltip"]').tooltip(); 
+		    $(document).on("click", ".constraint-item", changeBtnName);
 		});
+
+		function changeBtnName(){
+			$(".constraint-btn").html($(this).text()+" <span class='caret'></span>");
+		}
 	</script>
 	
 	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
@@ -418,9 +423,9 @@
 	<div id="addconstraint" class="modal fade" role="dialog" >
 		<div class="modal-dialog">
 		  	<div class="modal-content ">
-		  		<div class="modal-heading">
-		  			<p class="title">New Constraint</p>
-		  			<a href="#" class="pull-right" data-dismiss="modal">&times;</a>
+		  		<div class="modal-header">
+		  			<button type="button" class="close" data-dismiss="modal">&times;</button>
+		  			<h4>New Constraint</h4>
 		  		</div>
 			    <div class="modal-body">
 			    	<form action="" method="POST">
@@ -439,14 +444,19 @@
 
 						<div class="tab-content">
   							<div id="courserestriction" class="tab-pane fade in active">
-    							
-								<div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">
-										<select name="course_selection">
-										    <option value="Has">Has class on</option>
-										    <option value="No">No class on</option>
-										</select>
-									</span> <input name="course" type="text" class="form-control input-small">
+  								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-primary dropdown-toggle constraint-btn" data-toggle="dropdown">Class Constraints <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu">
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Have</a>
+											</li>
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Not Have</a>
+											</li>
+										</ul>
+									</div>
+									<input name="course" type="text" class="form-control input-small">
 						        </div>
   							</div>
   							<div id="meetingtime" class="tab-pane fade">
@@ -472,11 +482,13 @@
 								</div> -->
 
 								<div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">Start Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+									<span class="input-group-addon">Start Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
 						        </div>
 
 						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">End Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+									<span class="input-group-addon">End Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
 						        </div>
 						 
 						        <script type="text/javascript">
@@ -487,8 +499,7 @@
 						            });
 						        </script>
 
-
-    							<p><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</p>
+    							<small><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</small>
 
     							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
 								<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
