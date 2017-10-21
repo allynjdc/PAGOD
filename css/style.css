@@ -140,6 +140,18 @@
 		font-size: 20px;
 	}
 
+	.course_panel > .panel > .panel-heading > h4 {
+		display: inline-block;
+		width: 25%;
+		margin: 0;
+	}
+
+	.course_panel > .panel > .panel-heading > .progress {
+		display: inline-block;
+		width: 74%;
+		margin: 0;
+	}
+
 @media only screen and (min-width: 768px){
 
 	.btn_logged {
