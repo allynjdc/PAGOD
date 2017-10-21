@@ -424,15 +424,15 @@
 		  			<a href="#" class="pull-right" data-dismiss="modal">&times;</a>
 		  		</div>
 			    <div class="modal-body">
-			        <div>
-			        	<p> 
-			        		Priority: 
-			        		<label class="radio-inline"><input type="radio" name="priority">High</label>
-							<label class="radio-inline"><input type="radio" name="priority">Medium</label>
-							<label class="radio-inline"><input type="radio" name="priority">Low</label>
-						</p>
-			    	</div>
 			    	<form action="" method="POST">
+				    	<div>
+				        	<p> 
+				        		Priority: 
+				        		<label class="radio-inline"><input type="radio" name="priority">High</label>
+								<label class="radio-inline"><input type="radio" name="priority">Medium</label>
+								<label class="radio-inline"><input type="radio" name="priority">Low</label>
+							</p>
+				    	</div>
 			    		<ul class="nav nav-tabs">
   							<li class="active"><a data-toggle="tab" href="#courserestriction">Course Restriction</a></li>
   							<li><a data-toggle="tab" href="#meetingtime">Meeting Time</a></li>
@@ -440,8 +440,14 @@
 
 						<div class="tab-content">
   							<div id="courserestriction" class="tab-pane fade in active">
-    							<h3>SOME CONTENT</h3>
-    							<p>Some content. Some content.</p>
+    							<p> 
+					        		A course: 
+					        		<label class="radio-inline"><input type="radio" name="course_selection">Must have</label>
+									<label class="radio-inline"><input type="radio" name="course_selection">No</label>
+								</p>
+								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<span class="input-group-addon">Course: </span> <input id="timepicker3" type="text" class="form-control input-small">
+						        </div>
   							</div>
   							<div id="meetingtime" class="tab-pane fade">
     							
