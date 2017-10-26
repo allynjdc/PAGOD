@@ -74,30 +74,30 @@
     								<div class="panel-heading">
       									<h4 class="panel-title">
         									<!-- <a data-toggle="collapse" data-parent="#accordion" href="#high">High Priority</a> -->
-        									<a data-toggle="collapse" href="#high">High Priority</a>
+        									<a data-toggle="collapse" href="#high">High Priority<span class="badge pull-right" id="high_badge">0</span></a>
      									</h4>
     								</div>
-    								<div id="high" class="panel-collapse collapse">
+    								<div id="high" class="panel-collapse collapse in">
       									<div class="panel-body">
       										<div class="priority_entry">
 		  										<p>
 		  											<b>Class Start:</b>&nbsp;9:00 AM MTThF
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
 		  									<div class="priority_entry">
 		  										<p>
 		  											<b>No</b>&nbsp;Comm 3 class
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
 		  									<div class="priority_entry">
 		  										<p>
 		  											<b>No</b>&nbsp;Lit 2 class
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
       									</div>
@@ -108,30 +108,30 @@
 								<div class="panel panel-default">
     								<div class="panel-heading">
       									<h4 class="panel-title">
-        									<a data-toggle="collapse" href="#medium">Medium Priority</a>
+        									<a data-toggle="collapse" href="#medium">Medium Priority<span class="badge pull-right" id="medium_badge">0</span></a>
      									</h4>
     								</div>
-    								<div id="medium" class="panel-collapse collapse">
+    								<div id="medium" class="panel-collapse collapse in">
       									<div class="panel-body">
       										<div class="priority_entry">
 		  										<p>
 		  											<b>Class Start:</b>&nbsp;9:00 AM W
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
       										<div class="priority_entry">
 		  										<p>
 		  											<b>Class End:</b>&nbsp;4:00 PM MTWThF
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
 		  									<div class="priority_entry">
 		  										<p>
 		  											<b>No</b>&nbsp;Lit 3 class
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
       									</div>
@@ -142,23 +142,23 @@
 								<div class="panel panel-default">
     								<div class="panel-heading">
       									<h4 class="panel-title">
-        									<a data-toggle="collapse" href="#low">Low Priority</a>
+        									<a data-toggle="collapse" href="#low">Low Priority<span class="badge pull-right" id="low_badge">0</span></a>
      									</h4>
     								</div>
-    								<div id="low" class="panel-collapse collapse">
+    								<div id="low" class="panel-collapse collapse in">
       									<div class="panel-body">
       										<div class="priority_entry">
 		  										<p>
 		  											<b>Class Start:</b>&nbsp;1:00 PM TF
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
 		  									<div class="priority_entry">
 		  										<p>
 		  											<b>No</b>&nbsp;CMSC 162 class
 		  											<a class="" data-toggle="modal"  href="#remove" ><span class="glyphicon glyphicon-remove pull-right"></span></a>
-		  											<a class="" href="#"><span class="glyphicon glyphicon-edit pull-right"></span></a>
+		  											<a class="" data-toggle="modal" href="#editconstraint"><span class="glyphicon glyphicon-edit pull-right"></span></a>
 		  										</p>
 		  									</div>
       									</div>
@@ -425,12 +425,12 @@
 		  		</div>
 			    <div class="modal-body">
 			    	<form action="" method="POST">
-				    	<div>
+				    	<div class="priority_options">
 				        	<p> 
 				        		Priority: 
-				        		<label class="radio-inline"><input type="radio" name="priority">High</label>
-								<label class="radio-inline"><input type="radio" name="priority">Medium</label>
-								<label class="radio-inline"><input type="radio" name="priority">Low</label>
+				        		<label class="radio-inline"><input type="radio" name="priority" value="high">High</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="medium">Medium</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="low">Low</label>
 							</p>
 				    	</div>
 			    		<ul class="nav nav-tabs">
@@ -440,13 +440,19 @@
 
 						<div class="tab-content">
   							<div id="courserestriction" class="tab-pane fade in active">
-    							<p> 
-					        		A course: 
-					        		<label class="radio-inline"><input type="radio" name="course_selection">Must have</label>
-									<label class="radio-inline"><input type="radio" name="course_selection">No</label>
-								</p>
-								<div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">Course: </span> <input id="timepicker3" type="text" class="form-control input-small">
+  								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-primary dropdown-toggle constraint-btn" data-toggle="dropdown">Class Constraints <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu">
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Have</a>
+											</li>
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Not Have</a>
+											</li>
+										</ul>
+									</div>
+									<input name="course" type="text" class="form-control input-small">
 						        </div>
   							</div>
   							<div id="meetingtime" class="tab-pane fade">
@@ -472,11 +478,13 @@
 								</div> -->
 
 								<div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">Start Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+									<span class="input-group-addon">Start Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
 						        </div>
 
 						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
-									<span class="input-group-addon">End Time: </span> <input id="timepicker3" type="text" class="form-control input-small">
+									<span class="input-group-addon">End Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
 						        </div>
 						 
 						        <script type="text/javascript">
@@ -497,9 +505,9 @@
 
   							</div>
 						</div>
+						<button id="add_constraint" type="button" class="btn btn-primary btn_logged" data-dismiss="modal">Add</button>
+			    		<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
 			    	</form>
-			    	<button type="button" class="btn btn-primary btn_logged" data-dismiss="modal">Add</button>
-			    	<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
 			    </div>
 		    </div>
 	    </div>
@@ -520,6 +528,83 @@
 	</div>
 	<!-- END MODAL REMOVE CONSTRAINTS -->
 
+	<!-- MODAL EDIT CONSTRAINTS -->
+	<div id="editconstraint" class="modal fade" role="dialog" >
+		<div class="modal-dialog">
+		  	<div class="modal-content ">
+		  		<div class="modal-header">
+		  			<button type="button" class="close" data-dismiss="modal">&times;</button>
+		  			<h4>Edit Constraint</h4>
+		  		</div>
+			    <div class="modal-body">
+			    	<form action="" method="POST">
+				    	<div class="priority_options">
+				        	<p> 
+				        		Priority: 
+				        		<label class="radio-inline"><input type="radio" name="priority" value="high" checked="checked">High</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="medium">Medium</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="low">Low</label>
+							</p>
+				    	</div>
+			    		<ul class="nav nav-tabs">
+  							<li class="active"><a data-toggle="tab" href="#courserestriction">Course Restriction</a></li>
+  							<li><a data-toggle="tab" href="#meetingtime">Meeting Time</a></li>
+						</ul>
+
+						<div class="tab-content">
+  							<div id="courserestriction" class="tab-pane fade in active">
+  								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-primary dropdown-toggle constraint-btn" data-toggle="dropdown">Class Constraints <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu">
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Have</a>
+											</li>
+											<li role="presentation">
+												<a class="constraint-item" href="javascript:void(0)">Must Not Have</a>
+											</li>
+										</ul>
+									</div>
+									<input name="course" type="text" class="form-control input-small">
+						        </div>
+  							</div>
+  							<div id="meetingtime" class="tab-pane fade">
+								<div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<span class="input-group-addon">Start Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
+						        </div>
+
+						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
+									<span class="input-group-addon">End Time: </span>
+									<input id="timepicker3" type="text" class="form-control input-small" />
+						        </div>
+						 
+						        <script type="text/javascript">
+						            $('#timepicker3').timepicker({
+						                minuteStep: 5,
+						                showInputs: false,
+						                disableFocus: true
+						            });
+						        </script>
+
+    							<small><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</small>
+
+    							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
+								<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
+
+  							</div>
+						</div>
+						<button id="edit_constraint" type="button" class="btn btn-primary btn_logged" data-dismiss="modal">EDIT</button>
+			    		<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
+			    	</form>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- END MODAL EDIT CONSTRAINTS -->
 
 
 	<!-- FOOTER -->
