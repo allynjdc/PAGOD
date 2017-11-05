@@ -6,26 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 	<link type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap-timepicker.min.css" />
-    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-timepicker.min.js"></script>
+	<link rel="stylesheet" href="../schedule-template/schedule-template/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="../schedule-template/schedule-template/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
 	<script src="../jquery.js"></script>
+	<script src="../js/moment.js"></script>
 	<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
 	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="../js/schedule_script.js"></script>
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"/>	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-		    $('[data-toggle="tooltip"]').tooltip(); 
-		    $(document).on("click", ".constraint-item", changeBtnName);
-		});
-
-		function changeBtnName(){
-			$(".constraint-btn").html($(this).text()+" <span class='caret'></span>");
-		}
+	<script src="../schedule-template/schedule-template/js/modernizr.js"></script>
+	<script>
+		if( !window.jQuery ) document.write('<script src="../schedule-template/schedule-template/js/jquery-3.0.0.min.js"><\/script>');
 	</script>
-	
-	<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	<script src="../schedule-template/schedule-template/js/main.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"/>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 </head>
 
 <body >
@@ -69,7 +65,7 @@
 					<div class="panel-body">
 						<div class="btn-group">
 							<div class="btn-group-justified">
-								<a class="btn btn-primary" data-toggle="modal" href="#addconstraint"><span class="glyphicon glyphicon-plus"></span> Add CONSTRAINT</a>
+								<a class="btn btn-primary" data-toggle="modal" href="#addconstraint"><span class="glyphicon glyphicon-plus"></span> ADD CONSTRAINT</a>
 							</div>
 							
 							<!-- PRIORITIES -->
@@ -143,235 +139,59 @@
 			<!-- TIME TABLE PANEL -->
 			<div class="col-md-8">
 				<div class="panel panel-default panel-shadow">
-					<div class="panel-body">
-						<div class="table-responsive">
-							<table class="table table-bordered table-striped">
-    							<thead>
-      								<tr>
-        								<th>TIME</th>
-        								<th>MON</th>
-        								<th>TUE</th>
-        								<th>WED</th>
-        								<th>THU</th>
-        								<th>FRI</th>
-      								</tr>
-    							</thead>
-    							<tbody>
-      								<tr>
-								        <td>07:00 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>07:30 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>08:00 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>08:30 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>09:00 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>09:30 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>10:00 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>10:30 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>11:00 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>11:30 AM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>12:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>12:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>01:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>01:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>02:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>02:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>03:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>03:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>04:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>04:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>05:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>05:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>06:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>06:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>07:00 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-      								<tr>
-								        <td>07:30 PM</td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-								        <td></td>
-      								</tr>
-    							</tbody>
-  							</table>
+					<div class="cd-schedule loading">
+						<div class="timeline">
+							<ul>
+								<li><span>09:00</span></li>
+								<li><span>09:30</span></li>
+								<li><span>10:00</span></li>
+								<li><span>10:30</span></li>
+								<li><span>11:00</span></li>
+								<li><span>11:30</span></li>
+								<li><span>12:00</span></li>
+								<li><span>12:30</span></li>
+								<li><span>13:00</span></li>
+								<li><span>13:30</span></li>
+								<li><span>14:00</span></li>
+								<li><span>14:30</span></li>
+								<li><span>15:00</span></li>
+								<li><span>15:30</span></li>
+								<li><span>16:00</span></li>
+								<li><span>16:30</span></li>
+								<li><span>17:00</span></li>
+								<li><span>17:30</span></li>
+								<li><span>18:00</span></li>
+							</ul>
+						</div> <!-- .timeline -->
+						<div class="events">
+							<ul>
+								<li class="events-group">
+									<div class="top-info"><span>Monday</span></div>
+									<ul></ul>
+								</li>
+								<li class="events-group">
+									<div class="top-info"><span>Tuesday</span></div>
+									<ul></ul>
+								</li>
+								<li class="events-group">
+									<div class="top-info"><span>Wednesday</span></div>
+									<ul></ul>
+								</li>
+								<li class="events-group">
+									<div class="top-info"><span>Thursday</span></div>
+									<ul></ul>
+								</li>
+								<li class="events-group">
+									<div class="top-info"><span>Friday</span></div>
+									<ul></ul>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<!-- END PANEL -->
 			</div>
-
+			<!-- END COL -->
 		</div>
 		<!-- END ROW -->
 
@@ -384,70 +204,65 @@
 		  	<div class="modal-content ">
 		  		<div class="modal-header">
 		  			<button type="button" class="close" data-dismiss="modal">&times;</button>
-		  			<h4>New Constraint</h4>
+		  			<h4>NEW CONSTRAINT</h4>
 		  		</div>
 			    <div class="modal-body">
 			    	<form action="" method="POST">
 				    	<div class="priority_options">
 				        	<p> 
 				        		Priority: 
-				        		<label class="radio-inline"><input type="radio" name="priority" value="high">High</label>
-								<label class="radio-inline"><input type="radio" name="priority" value="medium">Medium</label>
-								<label class="radio-inline"><input type="radio" name="priority" value="low">Low</label>
+				        		<label class="radio-inline"><input type="radio" name="add_priority" value="high">High</label>
+								<label class="radio-inline"><input type="radio" name="add_priority" value="medium">Medium</label>
+								<label class="radio-inline"><input type="radio" name="add_priority" value="low">Low</label>
 							</p>
 				    	</div>
-			    		<ul class="nav nav-tabs">
-  							<li class="active"><a data-toggle="tab" href="#courserestriction">Course Restriction</a></li>
-  							<li><a data-toggle="tab" href="#meetingtime">Meeting Time</a></li>
+				    	<hr />
+			    		<ul id="add_tabs" class="nav nav-tabs">
+  							<li class="active" data-tab="addcourserestriction"><a data-toggle="tab" href="#addcourserestriction">Course Restriction</a></li>
+  							<li data-tab="addmeetingtime"><a data-toggle="tab" href="#addmeetingtime">Meeting Time</a></li>
 						</ul>
 
 						<div class="tab-content">
-  							<div id="courserestriction" class="tab-pane fade in active">
+  							<div id="addcourserestriction" class="tab-pane fade active in">
   								<div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<div class="input-group-btn">
-										<button type="button" class="btn btn-primary dropdown-toggle constraint-btn" data-toggle="dropdown">Class Constraints <span class="caret"></span></button>
+										<button data-constraint="mustnothave" type="button" class="btn btn-primary dropdown-toggle add-constraint-btn" data-toggle="dropdown">Must Not Have <span class="caret"></span></button>
 										<ul class="dropdown-menu" role="menu">
 											<li role="presentation">
-												<a class="constraint-item" href="javascript:void(0)">Must Have</a>
+												<a class="add-constraint-item constraint-item" href="javascript:void(0)">Must Have</a>
 											</li>
 											<li role="presentation">
-												<a class="constraint-item" href="javascript:void(0)">Must Not Have</a>
+												<a class="add-constraint-item constraint-item" href="javascript:void(0)">Must Not Have</a>
 											</li>
 										</ul>
 									</div>
 									<input name="course" type="text" class="form-control input-small">
 						        </div>
   							</div>
-  							<div id="meetingtime" class="tab-pane fade">
+  							<div id="addmeetingtime" class="tab-pane fade">
 								<div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<span class="input-group-addon">Start Time: </span>
-									<input id="timepicker3" type="text" class="form-control input-small" />
+									<input id="add-start-time" type="text" class="form-control input-small timepicker3" />
 						        </div>
 
 						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<span class="input-group-addon">End Time: </span>
-									<input id="timepicker3" type="text" class="form-control input-small" />
+									<input id="add-end-time" type="text" class="form-control input-small timepicker3" />
 						        </div>
-						 
-						        <script type="text/javascript">
-						            $('#timepicker3').timepicker({
-						                minuteStep: 5,
-						                showInputs: false,
-						                disableFocus: true
-						            });
-						        </script>
-
-    							<small><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</small>
-
-    							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
-
+						        <div>
+						        	<small><b>NOTE: </b>Inputting the SAME VALUES for START and END TIME will mean that there should be no class on chosen days.</small>
+						        </div>
+						        <div>
+						        	<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
+						        </div>
   							</div>
 						</div>
-						<button id="add_constraint" type="button" class="btn btn-primary btn_logged" data-dismiss="modal">Add</button>
+						<hr />
+						<button id="add_constraint" type="submit" class="btn btn-primary btn_logged">Add</button>
 			    		<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
 			    	</form>
 			    </div>
@@ -457,17 +272,17 @@
 	<!-- END MODAL ADD CONSTRAINTS --> 
 
 	<!--- MODAL REMOVE CONSTRAINTS -->
-	<div id="remove" class="modal fade" role="dialog">
+	<!-- <div id="remove" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 		  	<div class="modal-content ">
 			    <div class="modal-body confirm_panel">
 			       <h4> Are you sure you want to remove this? </h4>
-			    	<button type="button" class="btn btn-danger" data-dismiss="modal">Remove</button>
+			    	<button type="button" class="btn btn-danger remove-constraint" data-dismiss="modal">Remove</button>
 			    	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			    </div>
 		    </div>
 	    </div>
-	</div>
+	</div> -->
 	<!-- END MODAL REMOVE CONSTRAINTS -->
 
 	<!-- MODAL EDIT CONSTRAINTS -->
@@ -476,70 +291,69 @@
 		  	<div class="modal-content ">
 		  		<div class="modal-header">
 		  			<button type="button" class="close" data-dismiss="modal">&times;</button>
-		  			<h4>Edit Constraint</h4>
+		  			<h4>EDIT CONSTRAINT</h4>
 		  		</div>
 			    <div class="modal-body">
 			    	<form action="" method="POST">
 				    	<div class="priority_options">
 				        	<p> 
 				        		Priority: 
-				        		<label class="radio-inline"><input type="radio" name="priority" value="high" checked="checked">High</label>
-								<label class="radio-inline"><input type="radio" name="priority" value="medium">Medium</label>
-								<label class="radio-inline"><input type="radio" name="priority" value="low">Low</label>
+				        		<label class="radio-inline"><input type="radio" name="edit_priority" value="high" checked="checked">High</label>
+								<label class="radio-inline"><input type="radio" name="edit_priority" value="medium">Medium</label>
+								<label class="radio-inline"><input type="radio" name="edit_priority" value="low">Low</label>
 							</p>
 				    	</div>
-			    		<ul class="nav nav-tabs">
-  							<li class="active"><a data-toggle="tab" href="#courserestriction">Course Restriction</a></li>
-  							<li><a data-toggle="tab" href="#meetingtime">Meeting Time</a></li>
+			    		<ul id="edit_tabs" class="nav nav-tabs">
+  							<li class="active" data-tab="editcourserestriction"><a data-toggle="tab" href="#editcourserestriction">Course Restriction</a></li>
+  							<li data-tab="editmeetingtime"><a data-toggle="tab" href="#editmeetingtime">Meeting Time</a></li>
+  							<!-- <li><a data-toggle="tab" href="#scheduleflow">Schedule Flow</a></li> -->
 						</ul>
 
 						<div class="tab-content">
-  							<div id="courserestriction" class="tab-pane fade in active">
+  							<div id="editcourserestriction" class="tab-pane fade in active">
   								<div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<div class="input-group-btn">
-										<button type="button" class="btn btn-primary dropdown-toggle constraint-btn" data-toggle="dropdown">Class Constraints <span class="caret"></span></button>
+										<button data-constraint="mustnothave" type="button" class="btn btn-primary dropdown-toggle edit-constraint-btn" data-toggle="dropdown">Must Have <span class="caret"></span></button>
 										<ul class="dropdown-menu" role="menu">
 											<li role="presentation">
-												<a class="constraint-item" href="javascript:void(0)">Must Have</a>
+												<a class="edit-constraint-item constraint-item" href="javascript:void(0)">Must Have</a>
 											</li>
 											<li role="presentation">
-												<a class="constraint-item" href="javascript:void(0)">Must Not Have</a>
+												<a class="edit-constraint-item constraint-item" href="javascript:void(0)">Must Not Have</a>
 											</li>
 										</ul>
 									</div>
 									<input name="course" type="text" class="form-control input-small">
 						        </div>
   							</div>
-  							<div id="meetingtime" class="tab-pane fade">
+  							<div id="editmeetingtime" class="tab-pane fade">
 								<div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<span class="input-group-addon">Start Time: </span>
-									<input id="timepicker3" type="text" class="form-control input-small" />
+									<input id="edit-start-time" type="text" class="form-control input-small timepicker3" />
 						        </div>
 
 						        <div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<span class="input-group-addon">End Time: </span>
-									<input id="timepicker3" type="text" class="form-control input-small" />
+									<input id="edit-end-time" type="text" class="form-control input-small timepicker3" />
 						        </div>
-						 
-						        <script type="text/javascript">
-						            $('#timepicker3').timepicker({
-						                minuteStep: 5,
-						                showInputs: false,
-						                disableFocus: true
-						            });
-						        </script>
-
-    							<small><b>NOTE: </b>Inputting 00:00 on start and end time will mean that there should be no class on chosen days.</small>
-
-    							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
-								<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
-
-  							</div>
+						        <div>
+						        	<small><b>NOTE: </b>Inputting the SAME VALUES for START and END TIME will mean that there should be no class on chosen days.</small>
+						        </div>
+						        <div>
+	    							<label class="checkbox-inline"><input type="checkbox" name="days" value="MON">MON</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="TUE">TUE</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="WED">WED</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="THUR">THUR</label>
+									<label class="checkbox-inline"><input type="checkbox" name="days" value="FRI">FRI</label>
+						        </div>
+							</div><!-- 
+							<div id="scheduleflow" class="tab-pane fade">
+								<label class="radio-inline"><input type="radio" name="priority" value="block" checked="checked">Block Schedule</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="straight">Straight Schedule</label>
+								<label class="radio-inline"><input type="radio" name="priority" value="sparse">Sparse Schedule</label>
+							</div> -->
 						</div>
-						<button id="edit_constraint" type="button" class="btn btn-primary btn_logged" data-dismiss="modal">EDIT</button>
+						<button id="edit_constraint" type="submit" class="btn btn-primary btn_logged">EDIT</button>
 			    		<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
 			    	</form>
 			    </div>
