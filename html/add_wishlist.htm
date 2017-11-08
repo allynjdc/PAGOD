@@ -298,22 +298,22 @@
 				    	<div class="priority_options">
 				        	<p> 
 				        		Priority: 
-				        		<label class="radio-inline"><input type="radio" name="edit_priority" value="high" checked="checked">High</label>
-								<label class="radio-inline"><input type="radio" name="edit_priority" value="medium">Medium</label>
-								<label class="radio-inline"><input type="radio" name="edit_priority" value="low">Low</label>
+				        		<label class="radio-inline"><input id="radio_high" type="radio" name="edit_priority" value="high" checked="checked">High</label>
+								<label class="radio-inline"><input id="radio_medium" type="radio" name="edit_priority" value="medium">Medium</label>
+								<label class="radio-inline"><input id="radio_low" type="radio" name="edit_priority" value="low">Low</label>
 							</p>
 				    	</div>
+				    	<hr />
 			    		<ul id="edit_tabs" class="nav nav-tabs">
   							<li class="active" data-tab="editcourserestriction"><a data-toggle="tab" href="#editcourserestriction">Course Restriction</a></li>
   							<li data-tab="editmeetingtime"><a data-toggle="tab" href="#editmeetingtime">Meeting Time</a></li>
   							<!-- <li><a data-toggle="tab" href="#scheduleflow">Schedule Flow</a></li> -->
 						</ul>
-
 						<div class="tab-content">
   							<div id="editcourserestriction" class="tab-pane fade in active">
   								<div class="input-group bootstrap-timepicker timepicker btn_logged">
 									<div class="input-group-btn">
-										<button data-constraint="mustnothave" type="button" class="btn btn-primary dropdown-toggle edit-constraint-btn" data-toggle="dropdown">Must Have <span class="caret"></span></button>
+										<button data-constraint="mustnothave" type="button" class="btn btn-primary dropdown-toggle edit-constraint-btn" data-toggle="dropdown">Must Not Have <span class="caret"></span></button>
 										<ul class="dropdown-menu" role="menu">
 											<li role="presentation">
 												<a class="edit-constraint-item constraint-item" href="javascript:void(0)">Must Have</a>
@@ -323,7 +323,7 @@
 											</li>
 										</ul>
 									</div>
-									<input name="course" type="text" class="form-control input-small">
+									<input name="edit_course" type="text" class="form-control input-small">
 						        </div>
   							</div>
   							<div id="editmeetingtime" class="tab-pane fade">
@@ -353,6 +353,7 @@
 								<label class="radio-inline"><input type="radio" name="priority" value="sparse">Sparse Schedule</label>
 							</div> -->
 						</div>
+						<hr />
 						<button id="edit_constraint" type="submit" class="btn btn-primary btn_logged">EDIT</button>
 			    		<button type="button" class="btn btn-default btn_logged" data-dismiss="modal">Close</button>
 			    	</form>
