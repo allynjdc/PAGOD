@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	$(document).on("click", "#add_constraint", addConstraint);
 	$(document).on("click", "#edit_constraint", editConstraint);
+    $(document).on("click", "#generate_btn", generateSchedule);
+    $(document).on("click", "#generate_schedule", generateSchedule);
 	$(document).on("click", ".remove-constraint", removeConstraint);
 	$(document).on("click", ".edit-constraint", editModalOpen);
     $(document).on("click", ".constraint-item", changeBtnName);
@@ -13,6 +15,148 @@ $(document).ready(function(){
     });
 });
 
+function Subject(){
+	this.start_time = null;
+	this.end_time = null;
+	// monday is first day
+	this.days = [];
+	this.courseType = null;
+	this.units = 0
+	this.lecLab = null;
+	this.courseName = null;
+	this.setDays = function(indexArray){
+		this.days = indexArray;
+	}
+
+	this.setLecLab = function(value){
+		this.lecLab = value;
+	}
+
+	this.setUnits = function(units){
+		this.units = units;
+	}
+
+	this.setCourseType = function(type){
+		this.courseType = type;
+	}
+
+	this.setTime = function(start_time, end_time){
+		this.start_time = start_time;
+		this.end_time = end_time;
+	}
+
+	this.setCourseName = function(courseName){
+		this.courseName = courseName;
+	}
+
+	this.makeDOMObject = function(){
+		content_name = this.courseName.toLowerCase();
+		content_name = content_name.replace(" ", "-");
+		newLi = "<li class='single-event' data-start='"+this.start_time+"' data-end='"+this.end_time+"' data-content='event-"+content_name+"'>"+
+					"<a href='#0'>"+
+						"<em class='event-name'>"+this.courseName+" - "+this.lecLab+"</em>"+
+					"</a>"+
+				"</li>";
+		return newLi;
+	}
+}
+
+function generateSchedule(e){
+	if(e.target.id == "generate_btn"){
+		if($(".no_entry").length == 3){
+			$("#generate-warning-modal").modal("show");
+			return false;
+		}
+		// console.log("from if clause: "+e.target.id);
+	}
+	subjectArray = [
+		{
+			courseName: "CMSC 197",
+			start_time: "08:30",
+			end_time: "10:00",
+			days: ["0", "3"],
+			courseType: "core",
+			units: 3,
+			lecLab: "lec"
+		},
+		{
+			courseName: "CMSC 152",
+			start_time: "14:30",
+			end_time: "16:00",
+			days: ["0", "3"],
+			courseType: "core",
+			units: 3,
+			lecLab: "lec"
+		},
+		{
+			courseName: "CMSC 170",
+			start_time: "08:30",
+			end_time: "10:00",
+			days: ["1", "4"],
+			courseType: "core",
+			units: 3,
+			lecLab: "lec"
+		},
+		{
+			courseName: "CMSC 198.2",
+			start_time: "13:00",
+			end_time: "14:00",
+			days: ["1", "4"],
+			courseType: "core",
+			units: 2,
+			lecLab: "lec"
+		},
+		{
+			courseName: "PI 100",
+			start_time: "14:30",
+			end_time: "16:00",
+			days: ["1", "4"],
+			courseType: "service",
+			units: 3,
+			lecLab: "lec"
+		},
+		{
+			courseName: "CMSC 197",
+			start_time: "09:00",
+			end_time: "12:00",
+			days: ["2"],
+			courseType: "core",
+			units: 3,
+			lecLab: "lec"
+		}
+	];
+	subjObjList = [];
+	for (var i = subjectArray.length - 1; i >= 0; i--) {
+		subjObj = new Subject();
+		subjObj.setCourseName(subjectArray[i].courseName);
+		subjObj.setTime(subjectArray[i].start_time, subjectArray[i].end_time);
+		subjObj.setDays(subjectArray[i].days);
+		subjObj.setCourseType(subjectArray[i].courseType);
+		subjObj.setUnits(subjectArray[i].units);
+		subjObj.setLecLab(subjectArray[i].lecLab);
+		subjObjList.push(subjObj);
+	}
+
+	for (var i = subjObjList.length - 1; i >= 0; i--) {
+		subjectDays = subjObjList[i].days;
+		for (var j = subjectDays.length - 1; j >= 0; j--) {
+			$("ul[data-day="+subjectDays[j]+"]").append(subjObjList[i].makeDOMObject());
+		}
+	}
+
+	for (var i = 4; i >= 0; i--) {
+		liObjList = $("ul[data-day="+i+"] > li");
+		for (var j = liObjList.length - 1; j >= 0; j--) {
+			// console.log(liObjList[j]);
+			$(liObjList[j]).attr("data-event","event-"+(j+1));
+		}
+	}
+
+	// $(".cd-schedule").removeClass("js-full");
+	// $(".cd-schedule").addClass("js-full");
+	e.scheduleReset();
+	// console.log("outside if clause: "+e.target.id);
+}
 
 function hideEditModal(){
 	$("#edit_tabs > li").removeClass("active");

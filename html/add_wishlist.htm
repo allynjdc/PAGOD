@@ -14,7 +14,6 @@
 	<script src="../bootstrap-3.3.7-dist/js/jquery.min.js"></script>
 	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="../js/schedule_script.js"></script>
 	<script src="../schedule-template/schedule-template/js/modernizr.js"></script>
 	<script>
 		if( !window.jQuery ) document.write('<script src="../schedule-template/schedule-template/js/jquery-3.0.0.min.js"><\/script>');
@@ -22,6 +21,7 @@
 	<script src="../schedule-template/schedule-template/js/main.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet"/>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../js/schedule_script.js"></script>
 </head>
 
 <body >
@@ -126,7 +126,7 @@
 								</div>
 							</div>
   							<div class="btn-group-justified">
-								<a class="btn btn-primary" href="wishlist.htm"> GENERATE </a>
+								<a id="generate_btn" class="btn btn-primary" href="javascript:void(0)"> GENERATE </a>
 							</div>
   						</div>
 					</div>
@@ -142,6 +142,8 @@
 					<div class="cd-schedule loading">
 						<div class="timeline">
 							<ul>
+								<li><span>08:00</span></li>
+								<li><span>08:30</span></li>
 								<li><span>09:00</span></li>
 								<li><span>09:30</span></li>
 								<li><span>10:00</span></li>
@@ -159,33 +161,51 @@
 								<li><span>16:00</span></li>
 								<li><span>16:30</span></li>
 								<li><span>17:00</span></li>
-								<li><span>17:30</span></li>
-								<li><span>18:00</span></li>
 							</ul>
 						</div> <!-- .timeline -->
 						<div class="events">
 							<ul>
 								<li class="events-group">
 									<div class="top-info"><span>Monday</span></div>
-									<ul></ul>
+									<ul data-day="0"></ul>
 								</li>
 								<li class="events-group">
 									<div class="top-info"><span>Tuesday</span></div>
-									<ul></ul>
+									<ul data-day="1"></ul>
 								</li>
 								<li class="events-group">
 									<div class="top-info"><span>Wednesday</span></div>
-									<ul></ul>
+									<ul data-day="2"></ul>
 								</li>
 								<li class="events-group">
 									<div class="top-info"><span>Thursday</span></div>
-									<ul></ul>
+									<ul data-day="3"></ul>
 								</li>
 								<li class="events-group">
 									<div class="top-info"><span>Friday</span></div>
-									<ul></ul>
+									<ul data-day="4"></ul>
 								</li>
 							</ul>
+						</div>
+						<div class="event-modal">
+								<header class="header">
+									<div class="content">
+										<span class="event-date"></span>
+										<h3 class="event-name"></h3>
+									</div>
+
+									<div class="header-bg"></div>
+								</header>
+
+								<div class="body">
+									<div class="event-info"></div>
+									<div class="body-bg"></div>
+								</div>
+
+								<a href="#0" class="close">Close</a>
+							</div>
+
+							<div class="cover-layer"></div>
 						</div>
 					</div>
 				</div>
@@ -363,7 +383,25 @@
 	</div>
 	<!-- END MODAL EDIT CONSTRAINTS -->
 
-
+	<!-- SCHEDULE GENERATE ERROR MODAL -->
+	<div id="generate-warning-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header bg-warning">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><span class="glyphicon glyphicon-warning-sign"></span> GENERATE SCHEDULE</h4>
+				</div>
+				<div class="modal-body">
+					<p>You still haven't added any constraints. Are you sure you want to generate a schedule?</p>
+				</div>
+				<div class="modal-footer">
+					<button id="generate_schedule" type="button" class="btn btn-warning" data-dismiss="modal">GENERATE</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SCHEDULE GENERATE ERROR MODAL END -->
 
 	<!-- FOOTER -->
 	
