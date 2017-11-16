@@ -52,6 +52,8 @@ function Subject(){
 	this.makeDOMObject = function(){
 		content_name = this.courseName.toLowerCase();
 		content_name = content_name.replace(" ", "-");
+		// a = '<a href="#0"><em class="event-name">' + this.courseName + '-' + this.lecLab + '</em></a>'
+		// newLi = '<li class="single-event" data-start="' + this.start_time + '" data-end = "' + this.end_time + '" data-content="event-' + content_name+ '">' + a  + '</li>'
 		newLi = "<li class='single-event' data-start='"+this.start_time+"' data-end='"+this.end_time+"' data-content='event-"+content_name+"'>"+
 					"<a href='#0'>"+
 						"<em class='event-name'>"+this.courseName+" - "+this.lecLab+"</em>"+
@@ -140,7 +142,10 @@ function generateSchedule(e){
 	for (var i = subjObjList.length - 1; i >= 0; i--) {
 		subjectDays = subjObjList[i].days;
 		for (var j = subjectDays.length - 1; j >= 0; j--) {
-			$("ul[data-day="+subjectDays[j]+"]").append(subjObjList[i].makeDOMObject());
+			var ul = $("ul[data-day="+subjectDays[j]+"]");
+			var domObj = subjObjList[i].makeDOMObject();
+			// var domObj = subjObjList[i]
+			ul.append(domObj);
 		}
 	}
 
