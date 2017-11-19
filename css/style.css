@@ -152,6 +152,12 @@
 		margin: 0;
 	}
 
+	.panel > .important {
+		background-image: none;
+		background-color: #d86d5f;
+		color: white;
+	}
+
 	/* Dropdown Button */
 	.dropbtn {
 	    /*background-color: white; #4CAF50; */
