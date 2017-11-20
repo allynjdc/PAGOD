@@ -159,7 +159,16 @@ function generateSchedule(e){
 
 	// $(".cd-schedule").removeClass("js-full");
 	// $(".cd-schedule").addClass("js-full");
-	e.scheduleReset();
+	var schedules = $('.cd-schedule');
+	var objSchedulesPlan = [],
+		windowResize = false;
+	
+	if( schedules.length > 0 ) {
+		schedules.each(function(){
+			//create SchedulePlan objects
+			objSchedulesPlan.push(new SchedulePlan($(this)));
+		});
+	}
 	// console.log("outside if clause: "+e.target.id);
 }
 

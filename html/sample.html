@@ -5,13 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-	<link rel="stylesheet" href="../schedule-template/schedule-template/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="../schedule-template/schedule-template/css/style.css"> <!-- Resource style -->
-  	
+	<!-- <link rel="stylesheet" href="../schedule-template/schedule-template/css/reset.css"> --> <!-- CSS reset -->
+	<!-- <link rel="stylesheet" href="../schedule-template/schedule-template/css/style.css"> --> <!-- Resource style -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script src="../JQS_Scheduler/dist/jquery.schedule.min.js"></script>
+    <link rel="stylesheet" href="../JQS_Scheduler/dist/jquery.schedule.min.css">
 	<title>Schedule Sample</title>
 </head>
 <body>
-	<div class="cd-schedule loading">
+	<div class="schedule-table">
+	</div>
+	<!-- <div class="cd-schedule loading">
 		<div class="timeline">
 			<ul>
 				<li><span>08:00 AM</span></li>
@@ -200,6 +206,13 @@
 		if( !window.jQuery ) document.write('<script src="../schedule-template/schedule-template/js/jquery-3.0.0.min.js"><\/script>');
 
 	</script>
-	<script src="../schedule-template/schedule-template/js/main.js"></script>
+	<script src="../schedule-template/schedule-template/js/main.js"></script> -->
+
+    <script type="text/javascript">
+    	$(".schedule-table").jqs({
+    		mode: "read",
+    		hour: 12
+    	});
+    </script>
 </body>
 </html>
