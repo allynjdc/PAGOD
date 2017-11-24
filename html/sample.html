@@ -10,12 +10,12 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     
-    <script src="../JQS_Scheduler/dist/jquery.schedule.min.js"></script>
-    <link rel="stylesheet" href="../JQS_Scheduler/dist/jquery.schedule.min.css">
+    <script src="../JQS_Scheduler/dist/jquery.schedule.js"></script>
+    <link rel="stylesheet" href="../JQS_Scheduler/dist/jquery.schedule.css">
 	<title>Schedule Sample</title>
 </head>
 <body>
-	<div class="schedule-table">
+	<div id="schedule-table">
 	</div>
 	<!-- <div class="cd-schedule loading">
 		<div class="timeline">
@@ -209,9 +209,17 @@
 	<script src="../schedule-template/schedule-template/js/main.js"></script> -->
 
     <script type="text/javascript">
-    	$(".schedule-table").jqs({
+    	$("#schedule-table").jqs({
     		mode: "read",
-    		hour: 12
+    		hour: 12,
+    		data: [
+		        {
+		            "day": 0,
+		            "periods": [
+		                ["1pm", "3:30pm", "hello"]
+		            ]
+		        }
+		    ]
     	});
     </script>
 </body>

@@ -3,7 +3,7 @@
  * https://github.com/Yehzuna/jquery-schedule
  * Thomas BORUSZEWSKI <yehzuna@outlook.com>
  */
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
     "use strict";
 
     // Defaults options
@@ -61,7 +61,7 @@
                         position = 47;
                     }
 
-                    $this.add($(this), "id_" + event.timeStamp, position, 1);
+                    $this.add($(this), "id_" + event.timeStamp, position, 1, "");
                 });
 
                 // delete a selection
@@ -120,13 +120,13 @@
                         var element = $(".jqs-wrapper", $this.element).eq(data.day);
                         var position = $this.positionFormat(period[0]);
                         var height = $this.positionFormat(period[1]);
-
+                        var title = period[2];
                         if (height === 0) {
                             height = 48;
                         }
 
-                        var id = "id_" + index + data.day + position + height;
-                        $this.add(element, id, position, height - position);
+                        var id = "id_" + index + data.day + position + height + title;
+                        $this.add(element, id, position, height - position, title);
                     });
                 });
             }
@@ -139,7 +139,7 @@
          * @param position
          * @param height
          */
-        add: function (parent, id, position, height) {
+        add: function (parent, id, position, height, title) {
             if (height <= 0) {
                 if (this.settings.debug) {
                     console.error(this.settings.invalidPeriod);
@@ -155,7 +155,7 @@
             }
 
             // new element
-            var period = "<div class='jqs-period-title'>" + this.periodInit(position, position + height) + "</div>";
+            var period = "<div class='jqs-period-title'><div class='jqs-period-coursename'>" + title +"</div></div>";
             var element = $("<div class='jqs-period'><div class='jqs-period-container'>" + remove + period + "</div></div>")
                 .css({
                     "top": position * 20,
@@ -473,14 +473,14 @@
                     var element = $(".jqs-wrapper", $this.element).eq(data.day);
                     var position = $this.positionFormat(period[0]);
                     var height = $this.positionFormat(period[1]);
-
+                    var title = period[2];
                     if (height === 0) {
                         height = 48;
                     }
 
                     var id = "id_" + Date.now();
                     var check = true;
-                    if (!$this.add(element, id, position, height - position)) {
+                    if (!$this.add(element, id, position, height - position, title)) {
                         check = false;
                     }
 
