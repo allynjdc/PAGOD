@@ -49,18 +49,18 @@ function Subject(){
 		this.courseName = courseName;
 	}
 
-	this.makeDOMObject = function(){
-		content_name = this.courseName.toLowerCase();
-		content_name = content_name.replace(" ", "-");
-		// a = '<a href="#0"><em class="event-name">' + this.courseName + '-' + this.lecLab + '</em></a>'
-		// newLi = '<li class="single-event" data-start="' + this.start_time + '" data-end = "' + this.end_time + '" data-content="event-' + content_name+ '">' + a  + '</li>'
-		newLi = "<li class='single-event' data-start='"+this.start_time+"' data-end='"+this.end_time+"' data-content='event-"+content_name+"'>"+
-					"<a href='#0'>"+
-						"<em class='event-name'>"+this.courseName+" - "+this.lecLab+"</em>"+
-					"</a>"+
-				"</li>";
-		return newLi;
-	}
+	// this.makeDOMObject = function(){
+	// 	content_name = this.courseName.toLowerCase();
+	// 	content_name = content_name.replace(" ", "-");
+	// 	// a = '<a href="#0"><em class="event-name">' + this.courseName + '-' + this.lecLab + '</em></a>'
+	// 	// newLi = '<li class="single-event" data-start="' + this.start_time + '" data-end = "' + this.end_time + '" data-content="event-' + content_name+ '">' + a  + '</li>'
+	// 	newLi = "<li class='single-event' data-start='"+this.start_time+"' data-end='"+this.end_time+"' data-content='event-"+content_name+"'>"+
+	// 				"<a href='#0'>"+
+	// 					"<em class='event-name'>"+this.courseName+" - "+this.lecLab+"</em>"+
+	// 				"</a>"+
+	// 			"</li>";
+	// 	return newLi;
+	// }
 }
 
 function generateSchedule(e){
@@ -74,54 +74,54 @@ function generateSchedule(e){
 	subjectArray = [
 		{
 			courseName: "CMSC 197",
-			start_time: "08:30",
-			end_time: "10:00",
-			days: ["0", "3"],
+			start_time: "8:30am",
+			end_time: "10am",
+			days: [0, 3],
 			courseType: "core",
 			units: 3,
 			lecLab: "lec"
 		},
 		{
 			courseName: "CMSC 152",
-			start_time: "14:30",
-			end_time: "16:00",
-			days: ["0", "3"],
+			start_time: "2:30pm",
+			end_time: "4pm",
+			days: [0, 3],
 			courseType: "core",
 			units: 3,
 			lecLab: "lec"
 		},
 		{
 			courseName: "CMSC 170",
-			start_time: "08:30",
-			end_time: "10:00",
-			days: ["1", "4"],
+			start_time: "8:30am",
+			end_time: "10am",
+			days: [1, 4],
 			courseType: "core",
 			units: 3,
 			lecLab: "lec"
 		},
 		{
 			courseName: "CMSC 198.2",
-			start_time: "13:00",
-			end_time: "14:00",
-			days: ["1", "4"],
+			start_time: "1pm",
+			end_time: "12pm",
+			days: [1, 4],
 			courseType: "core",
 			units: 2,
 			lecLab: "lec"
 		},
 		{
 			courseName: "PI 100",
-			start_time: "14:30",
-			end_time: "16:00",
-			days: ["1", "4"],
+			start_time: "2:30pm",
+			end_time: "4pm",
+			days: [1, 4],
 			courseType: "service",
 			units: 3,
 			lecLab: "lec"
 		},
 		{
 			courseName: "CMSC 197",
-			start_time: "09:00",
-			end_time: "12:00",
-			days: ["2"],
+			start_time: "9am",
+			end_time: "12pm",
+			days: [2],
 			courseType: "core",
 			units: 3,
 			lecLab: "lec"
@@ -142,34 +142,16 @@ function generateSchedule(e){
 	for (var i = subjObjList.length - 1; i >= 0; i--) {
 		subjectDays = subjObjList[i].days;
 		for (var j = subjectDays.length - 1; j >= 0; j--) {
-			var ul = $("ul[data-day="+subjectDays[j]+"]");
-			var domObj = subjObjList[i].makeDOMObject();
-			// var domObj = subjObjList[i]
-			ul.append(domObj);
+			$("#schedule-loading").jqs('import',[
+				{
+					day: subjectDays[j],
+					periods: [
+						[subjObjList[i].start_time, subjObjList[i].end_time, subjObjList[i].courseName]
+					]
+				}
+			]);
 		}
 	}
-
-	for (var i = 4; i >= 0; i--) {
-		liObjList = $("ul[data-day="+i+"] > li");
-		for (var j = liObjList.length - 1; j >= 0; j--) {
-			// console.log(liObjList[j]);
-			$(liObjList[j]).attr("data-event","event-"+(j+1));
-		}
-	}
-
-	// $(".cd-schedule").removeClass("js-full");
-	// $(".cd-schedule").addClass("js-full");
-	var schedules = $('.cd-schedule');
-	var objSchedulesPlan = [],
-		windowResize = false;
-	
-	if( schedules.length > 0 ) {
-		schedules.each(function(){
-			//create SchedulePlan objects
-			objSchedulesPlan.push(new SchedulePlan($(this)));
-		});
-	}
-	// console.log("outside if clause: "+e.target.id);
 }
 
 function hideEditModal(){

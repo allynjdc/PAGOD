@@ -98,8 +98,14 @@
   border-radius: 3px;
 }
 .jqs .jqs-period .jqs-period-title {
-  font-size: 11px;
+  font-size: 10px;
 }
+
+.jqs .jqs-period .jqs-period-title .jqs-period-coursename{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .jqs .jqs-period:hover .jqs-remove {
   display: block;
 }
